@@ -1,7 +1,5 @@
-
--- Create database (run in MySQL client; change db name if you want)
-CREATE DATABASE IF NOT EXISTS products_cms DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-USE products_cms;
+-- Use the Clever Cloud database (already created)
+USE bvmciujguontnhoih1pm;
 
 -- Products table
 CREATE TABLE IF NOT EXISTS Products (
@@ -20,7 +18,7 @@ CREATE TABLE IF NOT EXISTS Products (
 -- Helpful indexes for filtering/search
 CREATE INDEX idx_products_status ON Products (status);
 CREATE INDEX idx_products_is_deleted ON Products (is_deleted);
-CREATE INDEX IF NOT EXISTS idx_products_name ON Products (product_name);
+CREATE INDEX idx_products_name ON Products (product_name);
 
 -- Sample rows
 INSERT INTO Products (product_name, product_desc, created_by, status)
