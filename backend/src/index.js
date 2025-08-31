@@ -16,7 +16,7 @@ app.use(cors({ origin: corsOrigin, credentials: true }));
 app.get('/api/health', (_req, res) => res.json({ ok: true }));
 app.use('/api', productsRouter);
 
-const port = process.env.PORT || 4000;
+const port = process.env.PORT || 8080;
 app.listen(port, () => {
   console.log(`Backend listening on http://localhost:${port}`);
 });
